@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="#FFF3E0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="หัวข้องาน"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minHeight="48dp"
+            android:textColor="#3E2723"
+            android:textColorHint="#8C6E63"
+            android:backgroundTint="#D7CCC8"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="รายละเอียด"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minHeight="48dp"
+            android:textColor="#3E2723"
+            android:textColorHint="#8C6E63"
+            android:backgroundTint="#D7CCC8"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editCreatedDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="วันที่สร้าง"
+            android:focusable="false"
+            android:inputType="none"
+            android:textColor="#3E2723"
+            android:textColorHint="#8C6E63"
+            android:backgroundTint="#D7CCC8"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editDueDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="วันที่ครบกำหนด"
+            android:focusable="false"
+            android:inputType="none"
+            android:textColor="#3E2723"
+            android:textColorHint="#8C6E63"
+            android:backgroundTint="#D7CCC8"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerEditCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D7CCC8"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerEditStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D7CCC8"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+</ScrollView>

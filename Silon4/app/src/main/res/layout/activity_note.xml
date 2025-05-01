@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5EFE6"
+    android:fillViewport="true"
+    tools:context=".NoteActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- โลโก้แอป -->
+        <ImageView
+            android:id="@+id/logoImageNote"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/todologo"
+            android:contentDescription="โลโก้ To-Do List" />
+
+        <!-- หัวข้อ -->
+        <EditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#D7CCC8"
+            android:hint="งานที่ต้องทำ"
+            android:minHeight="48dp"
+            android:textColor="#3E2723"
+            android:textColorHint="#8C6E63"
+            android:inputType="textMultiLine|textCapSentences" />
+
+        <!-- รายละเอียด -->
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#D7CCC8"
+            android:hint="รายละเอียดของงาน"
+            android:minHeight="48dp"
+            android:textColor="#3E2723"
+            android:textColorHint="#8C6E63"
+            android:inputType="textMultiLine|textCapSentences" />
+
+        <!-- วันที่ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editTextCreatedDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#D7CCC8"
+                android:focusable="false"
+                android:hint="วันที่สร้าง"
+                android:inputType="none"
+                android:textColor="#3E2723"
+                android:textColorHint="#8C6E63"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextDueDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="วันที่งานต้องเสร็จ"
+                android:focusable="false"
+                android:inputType="none"
+                android:textColor="#3E2723"
+                android:textColorHint="#8C6E63"
+                android:backgroundTint="#D7CCC8"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <!-- หมวดหมู่ -->
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#D7CCC8"
+            android:minHeight="48dp" />
+
+        <!-- สถานะ -->
+        <Spinner
+            android:id="@+id/spinnerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#D7CCC8"
+            android:minHeight="48dp" />
+
+        <!-- ปุ่มเลือกรูปภาพ -->
+        <Button
+            android:id="@+id/btnPickImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#A1887F"
+            android:text="เลือกรูปภาพ"
+            android:textColor="#212121" />
+
+        <!-- รูปภาพ -->
+        <ImageView
+            android:id="@+id/previewImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="8dp"
+            android:background="#D7CCC8" />
+
+        <!-- ปุ่มเพิ่มงาน -->
+        <Button
+            android:id="@+id/btnAddNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="เพิ่มงาน"
+            android:textColor="#FFFFFF"
+            android:background="#8D6E63"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ปุ่มย้อนกลับ -->
+        <Button
+            android:id="@+id/btnBackToHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#A1887F"
+            android:text="กลับหน้าหลัก"
+            android:textAllCaps="false"
+            android:textColor="#212121" />
+        <!-- รายการโน้ต -->
+        <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#FBE9E7"
+        android:padding="8dp" />
+    </LinearLayout>
+</ScrollView>
